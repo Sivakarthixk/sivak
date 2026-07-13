@@ -1,0 +1,16 @@
+<form action="https://formsubmit.co/el/juzugu" method="POST" target="_blank">
+
+    <input
+        type="search"
+        name="query"
+        placeholder="Search here..."
+        style="width:300px;padding:12px;border:1px solid #ccc;border-radius:8px;"
+        required>
+
+    <button
+        type="submit"
+        style="padding:12px 20px;background:#007bff;color:white;border:none;border-radius:8px;cursor:pointer;">
+        Search
+    </button>
+
+</form>
