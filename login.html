@@ -3,73 +3,85 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>K.L.N College of Engineering - Login</title>
+<title>K.L.N. College of Engineering | Login</title>
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:'Segoe UI',sans-serif;
 }
 
 body{
-    height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
+    height:100vh;
     background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 }
 
-.login-container{
-    width:380px;
-    background:#fff;
-    padding:35px;
+.container{
+    width:400px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(15px);
     border-radius:20px;
-    box-shadow:0 15px 35px rgba(0,0,0,.4);
+    padding:35px;
     text-align:center;
+    color:white;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
 }
 
 .logo{
     width:120px;
+    height:120px;
+    object-fit:contain;
     margin-bottom:15px;
+    border-radius:50%;
+    background:white;
+    padding:5px;
 }
 
 h2{
-    color:#003366;
     margin-bottom:5px;
 }
 
-.subtitle{
-    color:#666;
-    font-size:14px;
+p{
+    color:#ddd;
     margin-bottom:25px;
 }
 
-.input-box{
-    margin-bottom:18px;
+.input-group{
     text-align:left;
+    margin-bottom:18px;
 }
 
-.input-box label{
+.input-group label{
     display:block;
     margin-bottom:6px;
     font-weight:bold;
-    color:#333;
 }
 
-.input-box input{
+.input-group input{
     width:100%;
     padding:12px;
-    border:1px solid #ccc;
+    border:none;
+    outline:none;
     border-radius:8px;
     font-size:15px;
 }
 
-.input-box input:focus{
-    border-color:#0066cc;
-    outline:none;
-    box-shadow:0 0 5px rgba(0,102,204,.3);
+.password-box{
+    position:relative;
+}
+
+.password-box span{
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    color:#444;
 }
 
 button{
@@ -77,7 +89,7 @@ button{
     padding:12px;
     border:none;
     border-radius:8px;
-    background:#004080;
+    background:#007BFF;
     color:white;
     font-size:16px;
     cursor:pointer;
@@ -85,57 +97,106 @@ button{
 }
 
 button:hover{
-    background:#0066cc;
+    background:#0056b3;
 }
 
-.footer{
-    margin-top:20px;
-    font-size:13px;
-    color:#666;
+.options{
+    margin-top:15px;
+    font-size:14px;
 }
 
-a{
-    color:#0066cc;
+.options a{
+    color:#FFD700;
     text-decoration:none;
 }
 
-a:hover{
+.options a:hover{
     text-decoration:underline;
+}
+
+.email-btn{
+    display:block;
+    margin-top:20px;
+    background:#28a745;
+    color:white;
+    padding:12px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.email-btn:hover{
+    background:#1f7f34;
+}
+
+.footer{
+    margin-top:25px;
+    font-size:13px;
+    color:#ccc;
 }
 </style>
 
 </head>
 <body>
 
-<div class="login-container">
+<div class="container">
 
-    <img src="klnce.jpg" class="logo" alt="KLN Logo">
+<img src="klnce.jpg" class="logo" alt="KLN Logo">
 
-    <h2>K.L.N College of Engineering</h2>
-    <div class="subtitle">Student Login Portal</div>
+<h2>K.L.N. College of Engineering</h2>
+<p>Student Login Portal</p>
 
-    <form action="#" method="post">
+<form>
 
-        <div class="input-box">
-            <label>Register Number</label>
-            <input type="text" placeholder="Enter Register Number" required>
-        </div>
+<div class="input-group">
+<label>Register Number</label>
+<input type="text" placeholder="Enter Register Number" required>
+</div>
 
-        <div class="input-box">
-            <label>Password</label>
-            <input type="password" placeholder="Enter Password" required>
-        </div>
+<div class="input-group">
+<label>Password</label>
 
-        <button type="submit">Login</button>
-
-    </form>
-
-    <div class="footer">
-        Forgot Password?
-        <a href="#">Click Here</a>
-    </div>
+<div class="password-box">
+<input type="password" id="password" placeholder="Enter Password" required>
+<span onclick="togglePassword()">👁️</span>
+</div>
 
 </div>
+
+<button type="submit">Login</button>
+
+</form>
+
+<div class="options">
+<a href="#">Forgot Password?</a>
+</div>
+
+<a href="https://formsubmit.co/el/juzugu" target="_blank" class="email-btn">
+📧 Email Support
+</a>
+
+<div class="footer">
+© 2026 K.L.N. College of Engineering<br>
+Department of Computer Science & Engineering
+</div>
+
+</div>
+
+<script>
+function togglePassword(){
+
+var password=document.getElementById("password");
+
+if(password.type==="password"){
+password.type="text";
+}
+else{
+password.type="password";
+}
+
+}
+</script>
 
 </body>
 </html>
