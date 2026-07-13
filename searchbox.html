@@ -1,16 +1,178 @@
-<form action="https://formsubmit.co/el/juzugu" method="POST" target="_blank">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Support</title>
 
-    <input
-        type="search"
-        name="query"
-        placeholder="Search here..."
-        style="width:300px;padding:12px;border:1px solid #ccc;border-radius:8px;"
-        required>
+<style>
 
-    <button
-        type="submit"
-        style="padding:12px 20px;background:#007bff;color:white;border:none;border-radius:8px;cursor:pointer;">
-        Search
-    </button>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0F172A,#1E3A8A,#2563EB);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.container{
+    width:90%;
+    max-width:500px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
+    overflow:hidden;
+}
+
+.header{
+    background:#003366;
+    color:white;
+    padding:25px;
+    text-align:center;
+}
+
+.header h1{
+    font-size:28px;
+}
+
+.header p{
+    margin-top:8px;
+    color:#dcdcdc;
+}
+
+.form{
+    padding:30px;
+}
+
+label{
+    font-weight:600;
+    display:block;
+    margin-top:15px;
+    margin-bottom:8px;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+    transition:.3s;
+}
+
+input:focus,
+textarea:focus{
+    border-color:#2563EB;
+    outline:none;
+    box-shadow:0 0 8px rgba(37,99,235,.3);
+}
+
+textarea{
+    resize:none;
+}
+
+button{
+    width:100%;
+    margin-top:25px;
+    padding:14px;
+    background:#2563EB;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#1D4ED8;
+}
+
+.footer{
+    text-align:center;
+    padding:20px;
+    background:#f8f8f8;
+    color:#666;
+    font-size:14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+<h1>📧 Contact Support</h1>
+<p>Fill in the form below and we'll get back to you.</p>
+</div>
+
+<div class="form">
+
+<form action="https://formsubmit.co/el/juzugu" method="POST">
+
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="New Support Request">
+
+<label>Full Name</label>
+<input
+type="text"
+name="Name"
+placeholder="Enter your full name"
+required>
+
+<label>Contact Number</label>
+<input
+type="tel"
+name="Phone"
+placeholder="9876543210"
+pattern="[0-9]{10}"
+required>
+
+<label>Email Address</label>
+<input
+type="email"
+name="Email"
+placeholder="example@email.com"
+required>
+
+<label>Subject</label>
+<input
+type="text"
+name="Subject"
+placeholder="Enter subject"
+required>
+
+<label>Message</label>
+<textarea
+name="Message"
+rows="6"
+placeholder="Describe your issue here..."
+required></textarea>
+
+<button type="submit">
+Send Message
+</button>
 
 </form>
+
+</div>
+
+<div class="footer">
+© 2026 Support Portal | Powered by FormSubmit
+</div>
+
+</div>
+
+</body>
+</html>
